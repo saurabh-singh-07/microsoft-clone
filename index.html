@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="input.css">
 
-    <title>Microsoft</title>
+    <title>Microsoft – AI, Cloud, Productivity, Computing, Gaming &amp; Apps</title>
 </head>
-<body class="max-w-[1600px] mx-auto">
+<body class="max-w-[2000px] mx-auto">
     <nav class="px-3 py-4 mb-4">
         <ul class="flex justify-between items-center text-2xl">
             <div class="flex md:order-3">
@@ -51,33 +51,35 @@
     <div class="sildercontainer flex cursor-pointer overflow-hidden w-full relative">
         <div class="sliderfeild">
             <div class="sliderbox flex w-full">
-                <div class="slider w-full flex flex-shrink-0 flex-col-reverse lg:flex-row bg-white mx-2 lg:bg-cover lg:bg-center lg:relative">     
-                    <div class="left flex flex-col lg:absolute lg:top-12 lg:left-20 lg:w-1/3 lg:h-60 xl:h-72 lg:justify-center lg:items-baseline bg-white ">
-                        <h1 class="text-2xl lg:text-4xl py-3 mx-5 text-gray-800 font-semibold">Meet Surface Pro</h1>
-                        <p class="w-3/4 mx-5 lg:mx-6 md:text-base ">This laptop's unrivalled flexibility and AI features like Live Captions and Cocreator, enable you to do more than you ever imagined.</p>
-                        <button class="m-5 text-left bg-[#0067b8] w-fit px-4 py-1 text-white md:text-2xl lg:py-2">Learn more</button>
+                <div class="slider w-full flex flex-shrink-0 flex-col-reverse lg:flex-row bg-white lg:bg-cover lg:bg-center lg:relative">     
+                    <div class="left flex flex-col lg:absolute lg:top-12 lg:right-20 lg:w-1/3 lg:h-60 xl:h-72 lg:justify-center lg:items-baseline lg:bg-transparent bg-white ">
+                        <h1 class="text-2xl lg:text-4xl py-3 mx-5 text-gray-800 font-semibold">Microsoft 365</h1>
+                        <p class="w-3/4 mx-5 lg:mx-6 md:text-base ">Introducing Microsoft 365 Premium with our highest usage limits and exclusive Copilot features for AI power users.</p>
+                        <button class="m-5 text-left bg-[#0067b8] w-fit px-4 py-1 text-white md:text-2xl lg:py-2">Discover Microsoft 365 Premium</button>
                     </div>
                     <div class="right w-full h-full">
-                        <img class="h-70 xl:h-auto lg:h-100 w-auto lg:object-cover" src="slider2.avif" alt="">
+                        <img class=" xl:h-auto lg:h-100 w-auto lg:object-cover" src="slider1.avif" alt="">
                     </div>   
                 </div>
-                <div class="slider w-full flex flex-shrink-0 flex-col-reverse lg:flex-row bg-white mx-2 lg:bg-cover lg:bg-center lg:relative">     
+                <div class="slider w-full flex flex-shrink-0 flex-col-reverse lg:flex-row bg-white lg:bg-cover lg:bg-center lg:relative">     
                     <div class="left flex flex-col lg:absolute lg:top-12 lg:left-20 lg:w-1/3 lg:h-60 xl:h-72 lg:justify-center lg:items-baseline bg-white ">
                         <h1 class="text-2xl lg:text-4xl py-3 mx-5 text-gray-800 font-semibold">Meet Surface Pro</h1>
                         <p class="w-3/4 mx-5 lg:mx-6 md:text-base ">This laptop's unrivalled flexibility and AI features like Live Captions and Cocreator, enable you to do more than you ever imagined.</p>
                         <button class="m-5 text-left bg-[#0067b8] w-fit px-4 py-1 text-white md:text-2xl lg:py-2">Learn more</button>
                     </div>
                     <div class="right w-full h-full">
-                        <img class="h-70 xl:h-auto lg:h-100 w-auto lg:object-cover" src="slider1.avif" alt="">
+                        <img class=" xl:h-auto lg:h-100 w-auto lg:object-cover" src="slider2.avif" alt="">
                     </div>   
                 </div>
             </div>
-            <div class="controlbtn flex justify-center space-x-4">
-                <button onclick="nextslide()">1</button>
+            <div class="controlbtn my-5 md:my-10 flex justify-center space-x-4">
+                <button class="pausebtn cursor-pointer py-2 px-3 rounded-[50%] "><i class="ibtn fa-solid fa-pause "></i></button>
+                <button class="Prevbtn"><i class="fa-solid fa-backward"></i></button>
+
                  <div class="control flex space-x-4">
                     
                 </div>              
-                <button onclick="Firstslide()">2</button>
+                <button class="Nextbtn"><i class="fa-solid fa-forward"></i></button>
             </div>
         </div>
     </div>

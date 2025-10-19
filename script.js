@@ -21,6 +21,9 @@ morebtn.addEventListener('click', ()=>{
 const sliderbox = document.querySelector(".sliderbox");
 const slider = document.querySelectorAll(".slider");
 const control = document.querySelector(".control");
+const NextButton = document.querySelector(".Nextbtn");
+const PrevButton = document.querySelector(".Prevbtn");
+const pausebtn = document.querySelector(".pausebtn");
 let slidesCount = 1;
 let slideInterval;
 let length = slider.length;
@@ -52,16 +55,32 @@ function changecolor() {
     resetbg();
     buttons[slidesCount - 1].style.background = "black";
     }
-
 function nextslide(){
     sliderbox.style.transform = `translateX(-${slidesCount * 100}%)`;
     slidesCount++;
 }
-
+function prevslide(){
+    sliderbox.style.transform = `translateX(-${(slidesCount-2) * 100}%)`;
+    slidesCount--;
+}
 function Firstslide() {
     sliderbox.style.transform = `translateX(0px)`;
     slidesCount = 1;
 }
+function lastslide(){
+    sliderbox.style.transform = `translateX(-${(length - 1) * 100}%)`;
+    slidesCount = length;
+}
+
+NextButton.addEventListener("click",()=>{
+    slidesCount < length ? nextslide() : Firstslide();
+    changecolor();
+});
+
+PrevButton.addEventListener("click",()=>{
+    slidesCount > 1 ? prevslide() : lastslide();
+    changecolor();
+})
 
 function AutoSlidesShow(){
     slideInterval = setInterval(()=>{
@@ -69,4 +88,26 @@ function AutoSlidesShow(){
         changecolor();
     },4000);
 }
+let ispaused = false;
+const icon = document.querySelector(".ibtn");
+
+function PauseSlides(){
+    clearInterval(slideInterval);
+    ispaused = true;
+    icon.classList.replace("fa-pause", "fa-play");
+}
+
+
+function startSlides(){
+    AutoSlidesShow();
+    ispaused = false;
+    icon.classList.replace("fa-play", "fa-pause");
+}
+pausebtn.addEventListener("click", ()=>{
+    if(ispaused){
+        startSlides();
+    }else{
+        PauseSlides();
+    }
+})
 AutoSlidesShow();
