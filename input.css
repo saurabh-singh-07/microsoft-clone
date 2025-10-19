@@ -1,0 +1,10 @@
+.sliderbox{
+    transition: transform 1s ease-in-out;
+}
+.button{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-top: 5px;
+    border: 1px solid black;
+}
